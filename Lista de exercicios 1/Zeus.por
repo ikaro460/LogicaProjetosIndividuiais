@@ -55,7 +55,7 @@ programa
 		logico validacao //validacao do numero inserido
 			
 		//validacao do numero inserido
-		cadeia n1cadeia, n2cadeia, alfabeto[75] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", 
+		cadeia n1cadeia, n2cadeia, alfabeto[76] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", 
 											"k", "l", "m", "n", "o", "p", "q", "r", "s", "t", 
 											"u", "v", "w", "x", "y", "z",
 											"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", 
@@ -63,7 +63,7 @@ programa
 											"U", "V", "W", "X", "Y", "Z",
 											"!", "@", "#", "$", 
 											"%", "&", "*", "(", ")", "_", "+", "=","[", "]", 
-											"{", "}", ";", ",", ".", "/", "?", "~", " "}
+											"{", "}", ";", ",", ".", "/", "?", "~", " ", ""}
 							
 		// MENU INICIAL
 		
@@ -84,7 +84,7 @@ programa
 			limpa()
 
 			//verifica se o valor inserido é uma letra
-			para(inteiro i = 0; i < 75; i++){
+			para(inteiro i = 0; i < 76; i++){
 				/*
 				Nesse loop iremos percorrer toda o vetor alfabeto 
 				verificando letra por letra e comparando com o valor inserido.
@@ -194,8 +194,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1745; 
- * @DOBRAMENTO-CODIGO = [57, 148, 132];
+ * @POSICAO-CURSOR = 2876; 
+ * @DOBRAMENTO-CODIGO = [148, 132];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = {alfabeto, 58, 29, 8};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
