@@ -42,7 +42,11 @@
 
 //BUGS
 //1- Receber e exibir numeros decimais. RESOLVIDO
-//2- Tratar opcoes invalidas no menu de operacoes.
+//2- Tratar opcoes invalidas no menu de operacoes. PARCIALMENTE RESOLVIDO. erro se digitar uma cadeia
+//
+//POSSIVEIS MELHORIAS
+//
+//1- Implementar funcoes
 
 programa
 {
@@ -58,8 +62,8 @@ programa
 		//declara os numeros que serao inseridos e os respectivos resultados
 		real n1, n2, soma, subtracao, multiplicacao, divisao
 		
-		inteiro operador, //inteiro utilizado para escolher operacao a ser executada
-			menuFinal[2] = {1,2} // opcoes do menu final
+		cadeia operador //inteiro utilizado para escolher operacao a ser executada
+		inteiro menuFinal[2] = {1,2} // opcoes do menu final
 		
 		logico validacao //validacao do numero inserido
 			
@@ -81,25 +85,48 @@ programa
 			//inicializando variavel validacao
 			validacao = verdadeiro
 
-			//mensagem de boas vindas
-			escreva("************************\n\n")
-			escreva("Bem vindo a calculadora!\n\n")
-			escreva("************************\n\n\n")
+			//DESENHO - mensagem de boas vindas
+			para(inteiro i = 0; i < 5; i++){
+				para(inteiro j = 0; j < 33; j++){
+					se(i == 0 ou i == 4){
+						se(j % 2 == 0 ou j == 32){
+							escreva("*")	
+						}senao{
+							escreva(" ")	
+						}
+					}senao se(i == 1 ou i == 3){
+						se(j == 0 ou j == 32){
+							escreva("*")	
+						}senao{
+							escreva(" ")
+						}
+					}senao se(i == 2){
+						se(j == 0){
+							escreva("*   Bem vindo a calculadora!!   *")
+						}senao{
+							escreva("")
+						}
+					}senao{
+						escreva(" ")
+					}
+				}
+				escreva("\n")
+			}
 
 			//Pede os numeros ao usuario
-			escreva("Digite o primeiro número: ")
+			escreva("\nDigite o primeiro número: ")
 			leia(n1cadeia) 
 			escreva("Digite o segundo número: ")
 			leia(n2cadeia)
 			limpa()
 
-			//verifica se o valor inserido é uma letra
+			//verifica se o valor inserido e uma letra
 			para(inteiro i = 0; i < TAMANHO_DO_ALFABETO; i++){
 				/*
 				Nesse loop iremos percorrer toda o vetor alfabeto 
 				verificando letra por letra e comparando com o valor inserido.
 				
-				Obs: O caractere "." e um caractere válido, portanto e necessario
+				Obs: O caractere "." e um caractere valido, portanto e necessario
 				uma condicional apenas para verificar se o usuario inseriu "."
 				sem nenhum numero apos ou antes.
 				*/
@@ -177,11 +204,11 @@ programa
 
 
 			// TELA FINAL
-			escolha(operador){
+			escolha(t.cadeia_para_caracter(operador)){
 
 				//a funcao t.real_para_inteiro() converte para inteiro na hora de imprimir na tela
 				
-				caso 1: // SOMA
+				caso '1': // SOMA
 					soma = n1 + n2
 
 					//Verifica se resultado tem valores decimais
@@ -192,7 +219,7 @@ programa
 					}	
 									
 				pare
-				caso 2: // SUBTRACAO
+				caso '2': // SUBTRACAO
 					subtracao = n1 - n2
 
 					//Verifica se resultado tem valores decimais
@@ -203,7 +230,7 @@ programa
 					}
 					
 				pare
-				caso 3: // MULTIPLICACAO
+				caso '3': // MULTIPLICACAO
 					multiplicacao = n1 * n2
 
 					//Verifica se resultado tem valores decimais
@@ -213,7 +240,7 @@ programa
 						escreva("A multiplicação de ", n1Tela, " * ", n2Tela, " é igual a ", multiplicacao, "\n\n")		
 					}
 				pare
-				caso 4: // DIVISAO
+				caso '4': // DIVISAO
 					divisao = n1 / n2
 					// divisao por zero
 					se(n2 == 0){
@@ -228,9 +255,11 @@ programa
 					}
 					
 				pare
-				caso 5: //ESCOLHER OUTROS NUMEROS
+				caso '5': //ESCOLHER OUTROS NUMEROS
 					inicio()
 				pare	
+				caso contrario:
+				pare
 			}
 			
 		// MENU FINAL
@@ -263,8 +292,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1856; 
- * @DOBRAMENTO-CODIGO = [67];
+ * @POSICAO-CURSOR = 5875; 
+ * @DOBRAMENTO-CODIGO = [71, 88];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
