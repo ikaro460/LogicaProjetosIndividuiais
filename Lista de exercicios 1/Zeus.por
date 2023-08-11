@@ -185,6 +185,7 @@ programa
 				n1Tela = t.real_para_cadeia(n1)
 			}
 
+
 			//verifica numero 2
 			se(n2 == n2inteiro){
 				n2Tela = t.inteiro_para_cadeia(n2inteiro, 10)
@@ -268,7 +269,7 @@ programa
 			leia(menuFinal[0])	
 			limpa()
 			se(menuFinal[0] != 1){
-				escreva("Sair da calculadora?\n1- Sim\n2- Não\n3- Voltar ao menu inicial")
+				escreva("Sair da calculadora?\n1- Sim\n2- Não\n3- Voltar ao menu inicial\n")
 				leia(menuFinal[1])
 				limpa()	
 			}
@@ -292,8 +293,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 5875; 
- * @DOBRAMENTO-CODIGO = [71, 88];
+ * @POSICAO-CURSOR = 8758; 
+ * @DOBRAMENTO-CODIGO = [88];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

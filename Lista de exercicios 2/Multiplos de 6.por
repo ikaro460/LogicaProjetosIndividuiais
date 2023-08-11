@@ -27,6 +27,7 @@ programa
 	
 	funcao inicio()
 	{
+
 		inteiro n1, n2, maiorNumero, menorNumero, contador = 0, soma = 0
 		inteiro multiplos[2][3]={{0,0,0},{0,0,0}}
 
@@ -35,7 +36,7 @@ programa
 		limpa()
 		escreva("Digite o segundo número: ")
 		leia(n2)
-		limpa()
+		limpa()	
 
 		// Definindo o maior e menor numero
 		se(n1 > n2){
@@ -60,6 +61,9 @@ programa
 					contador++
 				}	
 			}
+
+			//Nesse momento o contador == 3
+			
 			//3 ultimos
 			para(inteiro i = maiorNumero; i>=menorNumero; i--){
 				se(i % 6 == 0 e contador > 0){
@@ -75,6 +79,8 @@ programa
 				}senao{
 					escreva("\n\nOs 3 últimos múltiplos de 6 no intervalo são: \n")
 				}
+				
+				// escreve os multiplos
 				para(inteiro j = 0; j < 3; j++){
 					escreva(multiplos[i][j], " ")
 					soma = soma + multiplos[i][j]
@@ -84,6 +90,8 @@ programa
 			escreva("\n\nA soma dos múltiplos é igual a: ", soma, "\n\n")
 			escreva("**************************************************")
 		}
+
+		
 		
 	}
 }
@@ -92,7 +100,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2289; 
+ * @POSICAO-CURSOR = 1135; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
